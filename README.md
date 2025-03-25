@@ -4,7 +4,7 @@ This PowerShell script collects and exports critical system information into CSV
 <br />
 
 
-<h2>Languages and Utilities Used</h2>
+<h2>Utilities Used</h2>
 
 - <b>VirtualBox</b> 
 - <b>Cowrie</b>
