@@ -1,4 +1,4 @@
-# Cowrie-and-Splunk:-Honeypot-Threat-Analysis
+# Cowrie and Splunk: Honeypot Threat Analysis
 <h2>Description</h2>
 This PowerShell script collects and exports critical system information into CSV files for security auditing and incident response. The script is triggered by specified tasks within the Task Scheduler, which will automatically run the script whenever one of the tasks is triggered. This project captures a snapshot of the system's state during potential security incidents for further analysis. 
 <br />
