@@ -29,16 +29,13 @@ In this project, I run Ubuntu in VirtualBox and deploy a honeypot to capture pot
 
 <h2>Project Walk-Through:</h2>
 
-<!--
+
 <p align="center">
-The Complete Script:<br />
-<img src="https://github.com/AndresPineda-CySec/PowerShell-Incident-Response-Script/blob/main/images/Full.png?raw=true" height="200%" width="200%"/> <br />
+Before deploying my honey pot, I want to make sure to secure my host machine, first, and then my virtual machine. I start by accessing the built in firewall macOS offers. I turn on stealth mode, to help prevent detection of my host machine. keep in my mind, this is does not secure the computer, it only helps keep the machine hidden from pings or port scans.
+<img src="" height="200%" width="200%"/> <br />
+Stealth scan is now on.<br />
 <br />
 <br />
 <h3 align="center">Script Walk-Through:</h3>
-<p align="center">
-Lines 1-5:<br />
-<img src="https://github.com/AndresPineda-CySec/PowerShell-Incident-Response-Script/blob/main/images/L1.png?raw=true" height="200%" width="200%"/> <br />
-Lines 1 and 4 create variables to store the directory paths, simplifying the script by referencing these paths later. Line 3 defines how the folder inside "IR_Reports" will be named using a timestamp. Line 5 then creates the folder at the specified path, ensuring it is a directory, and uses the command "-Force" to overwrite or create the folder no matter what.
-<br />
---!>
+
+
