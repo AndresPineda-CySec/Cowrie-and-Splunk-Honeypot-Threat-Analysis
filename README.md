@@ -9,6 +9,7 @@ In this project, I run Ubuntu in VirtualBox and deploy a honeypot to capture pot
 - <b>VirtualBox</b> 
 - <b>Cowrie</b>
 - <b>Splunk</b>
+- <b>Terminal</b>
 
 <h2>Environments Used</h2>
 
@@ -30,14 +31,20 @@ In this project, I run Ubuntu in VirtualBox and deploy a honeypot to capture pot
 <h2>Project Walk-Through:</h2>
 
 
+<h3 align="center">Securing My Mac Mini:</h3>
 <p align="center">
+<br />
+<br />
 Before deploying my honey pot, I want to make sure to secure my host machine, first, and then my virtual machine. I start by accessing the built in firewall macOS offers. I turn on stealth mode, to help prevent detection of my host machine.
 <br />
 <br />
 <img src="https://github.com/AndresPineda-CySec/Cowrie-and-Splunk-Honeypot-Threat-Analysis/blob/main/Images/Stealth_scan.png?raw=true" height="80%" width="80%"/> <br />
-Stealth scan is now on. keep in my mind, this is does not secure the computer, it only helps keep the machine hidden from pings or port scans.<br />
+Stealth scan is now on. keep in my mind, this is does not block any potential threats, it only helps keep the machine hidden from pings or port scans.<br />
 <br />
 <br />
-<h3 align="center">Script Walk-Through:</h3>
+<!--Next, I will create a segmented virtual network interface using the pf firewall and tuntap virtual network interfaces. This will allow me to isolate my ubuntu honeypot while still providing internet access, effectively simulating VLAN-like seperation.<br /> !-->
+<br />
+<br />
+<img src="" height="80%" width="80%"/> <br />
 
 
