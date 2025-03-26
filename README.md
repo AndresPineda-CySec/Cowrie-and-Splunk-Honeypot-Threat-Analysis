@@ -31,9 +31,9 @@ In this project, I run Ubuntu in VirtualBox and deploy a honeypot to capture pot
 
 
 <p align="center">
-Before deploying my honey pot, I want to make sure to secure my host machine, first, and then my virtual machine. I start by accessing the built in firewall macOS offers. I turn on stealth mode, to help prevent detection of my host machine. keep in my mind, this is does not secure the computer, it only helps keep the machine hidden from pings or port scans.
-<img src="" height="200%" width="200%"/> <br />
-Stealth scan is now on.<br />
+Before deploying my honey pot, I want to make sure to secure my host machine, first, and then my virtual machine. I start by accessing the built in firewall macOS offers. I turn on stealth mode, to help prevent detection of my host machine.
+<img src="https://github.com/AndresPineda-CySec/Cowrie-and-Splunk-Honeypot-Threat-Analysis/blob/main/Images/Stealth_scan.png?raw=true" height="200%" width="200%"/> <br />
+Stealth scan is now on. keep in my mind, this is does not secure the computer, it only helps keep the machine hidden from pings or port scans.<br />
 <br />
 <br />
 <h3 align="center">Script Walk-Through:</h3>
