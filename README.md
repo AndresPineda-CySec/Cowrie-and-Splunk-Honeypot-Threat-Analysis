@@ -39,7 +39,15 @@ Before deploying my honeypot, I want to secure my environment to minimize risks 
 <br />
 <br />
 <img src="https://github.com/AndresPineda-CySec/Cowrie-and-Splunk-Honeypot-Threat-Analysis/blob/main/Images/Ensure%20NAT%20is%20enabled.png?raw=true" height="80%" width="80%"/> <br />
-I can verify the network type my virtual machine is using by selecting it in the left column and scrolling down to the Network section. There, I can confirm that NAT is enabled, ensuring my VM is properly isolated while maintaining necessary connectivity.<br />
+I can verify the network type my virtual machine is using by selecting it in the left column and scrolling down to the Network section. There, I see that NAT is enabled, which does ensure my VM is properly isolated while maintaining necessary connectivity, but it restricts me from controlling important aspects of the network and doesn't allow me to review any VirtualBox logs. I need to set it to a custom NAT Network to gain those options.<br />
+<br />
+<br />
+<img src="https://github.com/AndresPineda-CySec/Cowrie-and-Splunk-Honeypot-Threat-Analysis/blob/main/Images/createIsolatedNet.png?raw=true" height="80%" width="80%"/> <br />
+The first step in order to set my ubuntu VM to a NAT network is to create one. I do this by going to tools, properties, then the NAT Networks sub section where a table is revealed. There i right click on the blank table, and select "create." I now can create a new NAT Network which i called "IsolatedNetwork." Now I have to set my Ubuntu VM to use this NAT Network.<br />
+<br />
+<br />
+<img src="https://github.com/AndresPineda-CySec/Cowrie-and-Splunk-Honeypot-Threat-Analysis/blob/main/Images/SettingToNatNEt.png?raw=true" height="80%" width="80%"/> <br />
+I now go to my VM settings, and then select network on the left. This reveals that my Ubunut VM is using NAT, so i change the "Attatched to:" section to "NAT Network" and the name to the NAT network i made: "IsolatedNetwork."<br />
 <br />
 <br />
 <img src="https://github.com/AndresPineda-CySec/Cowrie-and-Splunk-Honeypot-Threat-Analysis/blob/main/Images/Stealth_scan.png?raw=true" height="80%" width="80%"/> <br />
