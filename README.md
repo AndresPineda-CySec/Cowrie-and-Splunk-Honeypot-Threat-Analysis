@@ -35,13 +35,18 @@ In this project, I run Ubuntu in VirtualBox and deploy a honeypot to capture pot
 <p align="center">
 <br />
 <br />
-Before deploying my honey pot, I want to make sure to secure my host machine, first, and then my virtual machine. I start by accessing the built in firewall macOS offers. I turn on stealth mode, to help prevent detection of my host machine.
+Before deploying my honeypot, I want to secure my environment to minimize risks and ensure a controlled setup. The first step is to configure my virtual machine to run through a Network Address Translation (NAT) network. NAT acts as a protective barrier by isolating the VM from direct exposure to my home network while still allowing outbound connections. This setup helps safeguard my host machine from potential threats while maintaining the functionality needed for my honeypot deployment.
+<br />
+<br />
+<img src="https://github.com/AndresPineda-CySec/Cowrie-and-Splunk-Honeypot-Threat-Analysis/blob/main/Images/Ensure%20NAT%20is%20enabled.png?raw=true" height="80%" width="80%"/> <br />
+I can verify the network type my virtual machine is using by selecting it in the left column and scrolling down to the Network section. There, I can confirm that NAT is enabled, ensuring my VM is properly isolated while maintaining necessary connectivity.
 <br />
 <br />
 <img src="https://github.com/AndresPineda-CySec/Cowrie-and-Splunk-Honeypot-Threat-Analysis/blob/main/Images/Stealth_scan.png?raw=true" height="80%" width="80%"/> <br />
-Stealth scan is now on. keep in my mind, this is does not block any potential threats, it only helps keep the machine hidden from pings or port scans.<br />
+To implement Defense in Depth, I will start by securing my host machine with a simple yet effective step: enabling Stealth Mode. While Stealth Mode does not actively block threats, it helps obscure my Mac from network discovery by preventing it from responding to pings and port scans, reducing its visibility to potential attackers.<br />
 <br />
 <br />
+Next, I will block any inbound traffic from VirtualBox while still allowing outbound traffic. While NAT already provides this layer of protection, adding an explicit firewall rule ensures an extra safeguard against any misconfigurations or unforeseen vulnerabilities. In cybersecurity, it’s always better to be safe than sorry, and this further aligns with the principles of Defense in Depth.<br />
 <!--Next, I will create a segmented virtual network interface using the pf firewall and tuntap virtual network interfaces. This will allow me to isolate my ubuntu honeypot while still providing internet access, effectively simulating VLAN-like seperation.<br /> !-->
 <br />
 <br />
