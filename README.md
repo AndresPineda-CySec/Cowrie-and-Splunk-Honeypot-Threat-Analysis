@@ -31,15 +31,15 @@ In this project, I run Ubuntu in VirtualBox and deploy a honeypot to capture pot
 <h2>Project Walk-Through:</h2>
 
 
-<h3 align="center">Securing My Mac Mini:</h3>
+<h3 align="center">Securing My Enviornments:</h3>
 <p align="center">
 <br />
 <br />
-Before deploying my honeypot, I want to secure my environment to minimize risks and ensure a controlled setup. The first step is to configure my virtual machine to run through a Network Address Translation (NAT) network. NAT acts as a protective barrier by isolating the VM from direct exposure to my home network while still allowing outbound connections. This setup helps safeguard my host machine from potential threats while maintaining the functionality needed for my honeypot deployment.
+Before deploying my honeypot, I want to secure my environment to minimize risks and ensure a controlled setup. The first step is to configure my virtual machine to run through a Network Address Translation (NAT) network. NAT acts as a protective barrier by isolating the VM from direct exposure to my home network while still allowing outbound connections. This setup helps safeguard my host machine from potential threats while maintaining the functionality needed for my honeypot deployment.<br />
 <br />
 <br />
 <img src="https://github.com/AndresPineda-CySec/Cowrie-and-Splunk-Honeypot-Threat-Analysis/blob/main/Images/Ensure%20NAT%20is%20enabled.png?raw=true" height="80%" width="80%"/> <br />
-I can verify the network type my virtual machine is using by selecting it in the left column and scrolling down to the Network section. There, I can confirm that NAT is enabled, ensuring my VM is properly isolated while maintaining necessary connectivity.
+I can verify the network type my virtual machine is using by selecting it in the left column and scrolling down to the Network section. There, I can confirm that NAT is enabled, ensuring my VM is properly isolated while maintaining necessary connectivity.<br />
 <br />
 <br />
 <img src="https://github.com/AndresPineda-CySec/Cowrie-and-Splunk-Honeypot-Threat-Analysis/blob/main/Images/Stealth_scan.png?raw=true" height="80%" width="80%"/> <br />
