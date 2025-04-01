@@ -39,23 +39,18 @@ Before deploying my honeypot, I want to secure my environment to minimize risks 
 <br />
 <br />
 <img src="https://github.com/AndresPineda-CySec/Cowrie-and-Splunk-Honeypot-Threat-Analysis/blob/main/Images/Ensure%20NAT%20is%20enabled.png?raw=true" height="80%" width="80%"/> <br />
-I can verify the network type my virtual machine is using by selecting it in the left column and scrolling down to the Network section. There, I see that NAT is enabled, which does ensure my VM is properly isolated while maintaining necessary connectivity, but it restricts me from controlling important aspects of the network and doesn't allow me to review any VirtualBox logs. I need to set it to a custom NAT Network to gain those options.<br />
-<br />
-<br />
-<img src="https://github.com/AndresPineda-CySec/Cowrie-and-Splunk-Honeypot-Threat-Analysis/blob/main/Images/createIsolatedNet.png?raw=true" height="80%" width="80%"/> <br />
-The first step in order to set my ubuntu VM to a NAT network is to create one. I do this by going to tools, properties, then the NAT Networks sub section where a table is revealed. There i right click on the blank table, and select "create." I now can create a new NAT Network which i called "IsolatedNetwork." Now I have to set my Ubuntu VM to use this NAT Network.<br />
-<br />
-<br />
-<img src="https://github.com/AndresPineda-CySec/Cowrie-and-Splunk-Honeypot-Threat-Analysis/blob/main/Images/SettingToNatNEt.png?raw=true" height="80%" width="80%"/> <br />
-I now go to my VM settings, and then select network on the left. This reveals that my Ubunut VM is using NAT, so i change the "Attatched to:" section to "NAT Network" and the name to the NAT network i made: "IsolatedNetwork."<br />
+I can verify the network type my virtual machine is using by selecting it in the left column and scrolling down to the Network section. There, I can confirm that NAT is enabled, ensuring my VM is properly isolated while maintaining necessary connectivity.<br />
 <br />
 <br />
 <img src="https://github.com/AndresPineda-CySec/Cowrie-and-Splunk-Honeypot-Threat-Analysis/blob/main/Images/Stealth_scan.png?raw=true" height="80%" width="80%"/> <br />
-To implement Defense in Depth, I will start by securing my host machine with a simple yet effective step: enabling Stealth Mode. While Stealth Mode does not actively block threats, it helps obscure my Mac from network discovery by preventing it from responding to pings and port scans, reducing its visibility to potential attackers.<br />
+Another way i can protect my my host machine is a simple yet effective step: enabling Stealth Mode in the Mac firewall. While Stealth Mode does not actively block threats, it helps obscure my Mac from network discovery by preventing it from responding to pings and port scans, reducing its visibility to potential attackers.<br />
 <br />
 <br />
-Next, I will block any inbound traffic from VirtualBox while still allowing outbound traffic. While NAT already provides this layer of protection, adding an explicit firewall rule ensures an extra safeguard against any misconfigurations or unforeseen vulnerabilities. In cybersecurity, it’s always better to be safe than sorry, and this further aligns with the principles of Defense in Depth.<br />
-<!--Next, I will create a segmented virtual network interface using the pf firewall and tuntap virtual network interfaces. This will allow me to isolate my ubuntu honeypot while still providing internet access, effectively simulating VLAN-like seperation.<br /> !-->
+Now, I will configure my VM's firewall to block all inbound traffic except for traffic on port 2222, the default port used by Cowrie which is the honeypot I will be deploying. This step reduces the attack surface of my VM by limiting exposure to only the necessary traffic, ensuring that only connections intended for Cowrie are processed while all other attempts are blocked.<br />
+<br />
+<br />
+<img src="https://github.com/AndresPineda-CySec/Cowrie-and-Splunk-Honeypot-Threat-Analysis/blob/main/Images/firewallConfig.png?raw=true" height="80%" width="80%"/> <br />
+I open Terminal in my Ubuntu VM and check whether the Ubuntu firewall (UFW) is enabled: it's not. The first step is to enable the firewall before proceeding with my custom security rules. Once enabled, I begin by denying all inbound traffic while allowing outbound traffic (for now). Next, I create a rule to permit inbound traffic specifically on port 2222, ensuring that only connections intended for Cowrie are processed. Finally, I verify that my firewall rules have been successfully updated to confirm the changes are in effect.<br />
 <br />
 <br />
 <img src="" height="80%" width="80%"/> <br />
