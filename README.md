@@ -50,7 +50,7 @@ Now, I will configure my VM's firewall to block all inbound traffic except for t
 <br />
 <br />
 <img src="https://github.com/AndresPineda-CySec/Cowrie-and-Splunk-Honeypot-Threat-Analysis/blob/main/Images/firewallConfig.png?raw=true" height="80%" width="80%"/> <br />
-I open Terminal in my Ubuntu VM and check whether the Ubuntu firewall (UFW) is enabled: it's not. The first step is to enable the firewall before proceeding with my custom security rules. Once enabled, I begin by denying all inbound traffic while allowing outbound traffic (for now). Next, I create a rule to permit inbound traffic specifically on port 2222, ensuring that only connections intended for Cowrie are processed. Finally, I verify that my firewall rules have been successfully updated to confirm the changes are in effect.<br />
+I open Terminal in my Ubuntu VM and check whether the Ubuntu firewall (UFW) is enabled: it's not. The first step is to enable the firewall. Once enabled, I begin by denying all inbound traffic while allowing outbound traffic (for now). Next, I create a rule to permit inbound traffic on port 2222, ensuring that only connections intended for Cowrie are accepted. Finally, I verify that my firewall rules have been successfully updated to confirm the changes are in effect.<br />
 <br />
 <br />
 <img src="" height="80%" width="80%"/> <br />
