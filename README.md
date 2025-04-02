@@ -101,6 +101,64 @@ Now that the dependencies are installed, the next step is to switch to the Cowri
 <br />
 <img src="https://github.com/AndresPineda-CySec/Cowrie-and-Splunk-Honeypot-Threat-Analysis/blob/main/Images/downloadCowire.png?raw=true" height="80%" width="80%"/> <br />
 I can now install Cowrie using this command.<br />
+<br />
+<br />
+<img src="https://github.com/AndresPineda-CySec/Cowrie-and-Splunk-Honeypot-Threat-Analysis/blob/main/Images/createVenv.png?raw=true"/> <br />
+I set up a Python virtual environment for Cowrie to isolate it from the system. First, I navigated to the Cowrie directory and created a virtual environment using "python3 -m venv cowrie-env." Then, I activated it with "source cowrie-env/bin/activate," ensuring that installed packages remain contained within this environment. This helps improve security by preventing dependency conflicts and limiting the impact of a potential compromise.<br />
+<br />
+<br />
+<img src="https://github.com/AndresPineda-CySec/Cowrie-and-Splunk-Honeypot-Threat-Analysis/blob/main/Images/pip.png?raw=true"/> <br />
+I upgraded "pip" within the virtual environment using this command. "install --upgrade" ensures "pip" is installed and updates it to the latest version if an older one exists. This helps prevent compatibility issues and keeps the environment secure with the latest fixes and features.<br />
+<br />
+<br />
+<img src="https://github.com/AndresPineda-CySec/Cowrie-and-Splunk-Honeypot-Threat-Analysis/blob/main/Images/pipReq.png?raw=true"/> <br />
+I then install the "requirements.txt" file to ensure all necessary packages are up to date and properly configured within the virtual environment.<br />
+<br />
+<br />
+<img src="https://github.com/AndresPineda-CySec/Cowrie-and-Splunk-Honeypot-Threat-Analysis/blob/main/Images/copyCowrieConfigFile.png?raw=true"/> <br />
+After updating Cowrie, I need to edit its configuration file. I navigate to the "etc" directory, list the files, and create a copy of "cowrie.cfg.dist," renaming it to "cowrie.cfg." This allows me to customize settings while preserving the default configuration as a backup.<br />
+<br />
+<br />
+Staying in the same directory, I edit the "cowrie.cfg" file using the command nano cowrie.cfg."<br />
+<br />
+<br />
+<img src="https://github.com/AndresPineda-CySec/Cowrie-and-Splunk-Honeypot-Threat-Analysis/blob/main/Images/CowrieHostName.png?raw=true"/> <br />
+I edit the cowrie.cfg file and change the hostname to something more realistic, naming it "ubuntu-server-08" to better mimic a real server setup.<br /> 
+<br />
+<br />
+<img src="https://github.com/AndresPineda-CySec/Cowrie-and-Splunk-Honeypot-Threat-Analysis/blob/main/Images/SSH-SSL-UbuntuVers.png?raw=true"/> <br />
+Since the config file originally listed a Debian OS and I changed the hostname to "ubuntu-server-08," I now have to update the OS to Ubuntu to match. Additionally, I updated the OpenSSH and OpenSSL versions to slightly newer ones than initially listed, ensuring the configuration reflects a more current system setup.<br />
+<br />
+<br />
+With these changes in the config file, my honeypot will appear more authentic, making it more likely to attract potential attackers.<br />
+<br />
+<br />
+<br />
+<br />
+<h3 align="center">Configuring Splunk:</h3>
+<p align="center">
 
 
 
+
+
+
+
+
+
+
+<h3 align="center">Exporting Cowrie Logs to splunk for monitoring:</h3>
+<p align="center">
+
+
+
+
+
+
+
+
+
+
+
+<h3 align="center">Results:</h3>
+<p align="center">
