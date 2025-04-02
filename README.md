@@ -54,7 +54,7 @@ Now, I will move on to my Ubuntu VM.<br />
 Before proceeding, I want to ensure that the only user on my VM is not root. This adds an extra layer of security, helping protect my VM in case my honeypot is compromised and reducing the risk of a VM escape affecting my host machine. To verify this, I ran the "id" command and confirmed that my UID and GID are both 1000. This indicates that the account is a standard user with limited system access, reinforcing the principle of least privilege.<br />
 <br />
 <br />
-After confirming that my user is not root, I proceed to update the OS and all installed packages. I do this by first running the command "sudo apt update" and then running the command "sudo apt upgrade." :
+After confirming that my user is not root, I proceeded to update the OS and all installed packages. I do this by first running the command "sudo apt update" and then running the command "sudo apt upgrade." :
 <img src="https://github.com/AndresPineda-CySec/Cowrie-and-Splunk-Honeypot-Threat-Analysis/blob/main/Images/checkUpdate.png?raw=true" height="80%" width="80%"/> <br />
 <img src="https://github.com/AndresPineda-CySec/Cowrie-and-Splunk-Honeypot-Threat-Analysis/blob/main/Images/update.png?raw=true" height="80%" width="80%"/> <br />
 <br />
@@ -63,7 +63,7 @@ Now, I will configure my VM's firewall to block all inbound traffic except for t
 <br />
 <br />
 <img src="https://github.com/AndresPineda-CySec/Cowrie-and-Splunk-Honeypot-Threat-Analysis/blob/main/Images/firewallConfig.png?raw=true" height="80%" width="80%"/> <br />
-I open Terminal in my Ubuntu VM and check whether the Ubuntu firewall (UFW) is enabled, but it's not. The first step is to enable the firewall. Once enabled, I deny all inbound traffic while allowing outbound traffic (for now). Next, I create a rule to permit inbound traffic on port 2222 and port 22, ensuring that only connections intended for Cowrie are accepted. Finally, I verify that my firewall rules have been successfully updated to confirm the changes are in effect.<br />
+I open Terminal in my Ubuntu VM and check whether the Uncomplicated firewall (UFW) is enabled: it's not. The first step is to enable the firewall. Once enabled, I deny all inbound traffic while allowing outbound traffic (for now). Next, I create a rule to permit inbound traffic on port 2222 and port 22, ensuring that only connections intended for Cowrie are accepted. Finally, I verify that my firewall rules have been successfully updated to confirm the changes are in effect.<br />
 <br />
 <br />
 <img src="https://github.com/AndresPineda-CySec/Cowrie-and-Splunk-Honeypot-Threat-Analysis/blob/main/Images/PortFoward.png?raw=true" height="80%" width="80%"/> <br />
