@@ -27,6 +27,7 @@ In this project, I run Ubuntu in VirtualBox and deploy a honeypot to capture pot
 - <b>Threat Intelligence</b>
 - <b>Network Segmentation</b>
 - <b>Defense in Depth</b>
+- <b>Principle of Least Privilege</b>
 
 <h2>Project Walk-Through:</h2>
 
@@ -46,6 +47,18 @@ I can verify the network type my virtual machine uses by selecting it in the lef
 Another way i can protect my my host machine is a simple yet effective step: enabling Stealth Mode in the Mac firewall. While Stealth Mode does not actively block threats, it helps obscure my Mac from network discovery by preventing it from responding to pings and port scans, reducing its visibility to potential attackers.<br />
 <br />
 <br />
+Now, I will move on to my Ubuntu VM.<br />
+<br />
+<br />
+<img src="https://github.com/AndresPineda-CySec/Cowrie-and-Splunk-Honeypot-Threat-Analysis/blob/main/Images/NotRoot.png?raw=true" height="80%" width="80%"/> <br />
+Before proceeding, I want to ensure that the only user on my VM is not root. This adds an extra layer of security, helping protect my VM in case my honeypot is compromised and reducing the risk of a VM escape affecting my host machine. To verify this, I ran the "id" command and confirmed that my UID and GID are both 1000. This indicates that the account is a standard user with limited system access, reinforcing the principle of least privilege.<br />
+<br />
+<br />
+After confirming that my user is not root, I proceed to update the OS and all installed packages. I do this by first running the command "sudo apt update" and then running the command "sudo apt upgrade." :
+<img src="https://github.com/AndresPineda-CySec/Cowrie-and-Splunk-Honeypot-Threat-Analysis/blob/main/Images/checkUpdate.png?raw=true" height="80%" width="80%"/> <br />
+<img src="https://github.com/AndresPineda-CySec/Cowrie-and-Splunk-Honeypot-Threat-Analysis/blob/main/Images/update.png?raw=true" height="80%" width="80%"/> <br />
+<br />
+<br />  
 Now, I will configure my VM's firewall to block all inbound traffic except for traffic on port 2222, the default port my Cowrie honeypot will use, and port 22, the default SSH port. Keeping port 22 open can be risky, but I will eventually route SSH to a different port and forward any traffic from port 22 to Cowries default 2222. This step reduces the attack surface of my VM by limiting exposure to only the necessary traffic, ensuring that Cowrie processes all successful connections while all other attempts are blocked.<br />
 <br />
 <br />
