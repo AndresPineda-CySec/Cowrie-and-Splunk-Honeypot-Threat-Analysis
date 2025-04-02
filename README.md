@@ -62,7 +62,7 @@ After confirming that my user is not root, I proceeded to update the OS and all 
 Now, I will configure my VM's firewall to block all inbound traffic except for traffic on port 2222, the default port my Cowrie honeypot will use, and port 22, the default SSH port. Keeping port 22 open can be risky, but I will eventually route SSH to a different port and forward any traffic from port 22 to Cowries default 2222. This step reduces the attack surface of my VM by limiting exposure to only the necessary traffic, ensuring that Cowrie processes all successful connections while all other attempts are blocked.<br />
 <br />
 <br />
-<img src="https://github.com/AndresPineda-CySec/Cowrie-and-Splunk-Honeypot-Threat-Analysis/blob/main/Images/firewallConfig.png?raw=true" height="80%" width="80%"/> <br />
+<img src="https://github.com/AndresPineda-CySec/Cowrie-and-Splunk-Honeypot-Threat-Analysis/blob/main/Images/UFWConfig.png?raw=true" height="80%" width="80%"/> <br />
 I open Terminal in my Ubuntu VM and check whether the Uncomplicated firewall (UFW) is enabled: it's not. The first step is to enable the firewall. Once enabled, I deny all inbound traffic while allowing outbound traffic (for now). Next, I create a rule to permit inbound traffic on port 2222 and port 22, ensuring that only connections intended for Cowrie are accepted. Finally, I verify that my firewall rules have been successfully updated to confirm the changes are in effect.<br />
 <br />
 <br />
