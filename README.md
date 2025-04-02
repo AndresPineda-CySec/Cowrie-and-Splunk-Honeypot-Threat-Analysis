@@ -119,7 +119,7 @@ I then install the "requirements.txt" file to ensure all necessary packages are 
 After updating Cowrie, I need to edit its configuration file. I navigate to the "etc" directory, list the files, and create a copy of "cowrie.cfg.dist," renaming it to "cowrie.cfg." This allows me to customize settings while preserving the default configuration as a backup.<br />
 <br />
 <br />
-Staying in the same directory, I edit the "cowrie.cfg" file using the command nano cowrie.cfg."<br />
+In the same directory, I edit the "cowrie.cfg" file using the command nano cowrie.cfg."<br />
 <br />
 <br />
 <img src="https://github.com/AndresPineda-CySec/Cowrie-and-Splunk-Honeypot-Threat-Analysis/blob/main/Images/CowrieHostName.png?raw=true"/> <br />
