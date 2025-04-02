@@ -44,7 +44,7 @@ I can verify the network type my virtual machine uses by selecting it in the lef
 <br />
 <br />
 <img src="https://github.com/AndresPineda-CySec/Cowrie-and-Splunk-Honeypot-Threat-Analysis/blob/main/Images/Stealth_scan.png?raw=true" height="80%" width="80%"/> <br />
-Another way i can protect my my host machine is a simple yet effective step: enabling Stealth Mode in the Mac firewall. While Stealth Mode does not actively block threats, it helps obscure my Mac from network discovery by preventing it from responding to pings and port scans, reducing its visibility to potential attackers.<br />
+Another way I can protect my host machine is by enabling Stealth Mode in the Mac firewall settings. While Stealth Mode does not actively block threats, it helps obscure my Mac from network discovery by preventing it from responding to pings and port scans, reducing its visibility to potential attackers.<br />
 <br />
 <br />
 Now, I will move on to my Ubuntu VM.<br />
@@ -76,5 +76,31 @@ The next step is to access the SSH config file to change the default SSh port th
 <br />
 <img src="https://github.com/AndresPineda-CySec/Cowrie-and-Splunk-Honeypot-Threat-Analysis/blob/main/Images/NanoPortChange.png?raw=true" height="80%" width="80%"/> <br />
 Once in the config file, I uncommented "port 22" to change it to a random unused port number; I chose port 9444. 
+<br />
+<br />
+<img src="https://github.com/AndresPineda-CySec/Cowrie-and-Splunk-Honeypot-Threat-Analysis/blob/main/Images/DefaultCreds.png?raw=true" height="80%" width="80%"/> <br />
+The final step in hardening my environment before installing Cowrie is creating a new user specifically for running Cowrie. I achieved this by running the command "sudo adduser --disabled-password cowrie," which creates the "cowrie" user as a restricted account. The "--disabled-password" flag disables password authentication, minimizing the risk of unauthorized access. This action improves security by enforcing least privilege, preventing VM escapes, and isolating services, ensuring that even if the honeypot is compromised, my system remains protected.
+<br />
+<br />
+<br />
+<br />
+<h3 align="center">Installing Cowrie:</h3>
+<p align="center">
+<br />
+<br />
+Before installing Cowrie, I have to make sure I install a few dependencies to ensure Cowrie can run efficiently.
+<br />
+<br />
+<img src="https://github.com/AndresPineda-CySec/Cowrie-and-Splunk-Honeypot-Threat-Analysis/blob/main/Images/installDependency.png?raw=true" height="80%" width="80%"/> <br />
+This command installs essential dependencies for setting up Cowrie. It installs "git" for version control, "python3-venv" for creating isolated Python environments, "libssl-dev" for cryptographic functions, "libffi-dev" for interfacing with C libraries, "build-essential" for compiling software, "libpython3-dev" for Python development headers, and "python3-minimal" for the minimal Python 3 installation required to run Python applications. These packages ensure that Cowrie runs securely and has all the necessary tools for building and interacting with Python code.<br />
+<br />
+<br />
+<img src="https://github.com/AndresPineda-CySec/Cowrie-and-Splunk-Honeypot-Threat-Analysis/blob/main/Images/useCowrieUser.png?raw=true" height="80%" width="80%"/> <br />
+Now that the dependencies are installed, the next step is to switch to the Cowrie user.<br />
+<br />
+<br />
+<img src="https://github.com/AndresPineda-CySec/Cowrie-and-Splunk-Honeypot-Threat-Analysis/blob/main/Images/downloadCowire.png?raw=true" height="80%" width="80%"/> <br />
+I can now install Cowrie using this command.<br />
+
 
 
