@@ -208,10 +208,20 @@ After selecting the ManukaHoneyPot app, I am brought to an empty dashboard. Once
 <br />
 <br />
 <br />
-<h3 align="center">Exporting Cowrie Logs to Splunk for monitoring:</h3>
+<h3 align="center">Exporting Cowrie Logs to Splunk:</h3>
 <p align="center">
 <br />
 <br />
+<img src="https://github.com/AndresPineda-CySec/Cowrie-and-Splunk-Honeypot-Threat-Analysis/blob/main/Images/Cowrie.cfg.png?raw=true" height="80%" width="80%"/> <br />
+To link my honeypot to Splunk, I first access my Ubuntu VM and switch to the "cowrie" user through the terminal. From there, I navigate the directory to get to the Cowrie configuration file and use the command "nano cowrie.cfg" to access cowrie.cfg.<br /> 
+<br />
+<br />
+<img src="https://github.com/AndresPineda-CySec/Cowrie-and-Splunk-Honeypot-Threat-Analysis/blob/main/Images/OriginalCowrieSplunkconfig.png?raw=true" height="80%" width="80%"/> <br />
+Inside the config file, I located the Splunk output section, which was initially disabled and configured with the incorrect URL and token; both need to be updated for proper integration.<br />
+<br />
+<br />
+<img src="https://github.com/AndresPineda-CySec/Cowrie-and-Splunk-Honeypot-Threat-Analysis/blob/main/Images/updated%20cowrie:splunk.png?raw=true" height="80%" width="80%"/> <br />
+I update the "Output_Splunk" section by replacing the default URL with my host machine's IP address and inserting the correct token from my Cowrie HEC in Splunk. This ensures that Cowrie logs are sent to the right destination for analysis.<br />
 
 
 
