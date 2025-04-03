@@ -179,11 +179,11 @@ On the "HTTP Event Collector" page, I select my Cowrie HEC to edit it. I then as
 <br />
 <br />
 <img src="https://github.com/AndresPineda-CySec/Cowrie-and-Splunk-Honeypot-Threat-Analysis/blob/main/Images/EnableHEC.png?raw=true" height="80%" width="80%"/> <br />
-By default, the HEC is disabled, so I need to enable it. I do this by selecting "Global Settings" and selecting "Enabled."
+By default, the HEC is disabled, so I need to enable it. I do this by selecting "Global Settings" and selecting "Enabled."<br />
 <br />
 <br />
 <img src="https://github.com/AndresPineda-CySec/Cowrie-and-Splunk-Honeypot-Threat-Analysis/blob/main/Images/ScConfirmHECisEnabkled.png?raw=true" height="80%" width="80%"/> <br />
-Once saved, I can see that the HEC is enabled.
+Once saved, I can see that the HEC is enabled.<br />
 
   
 
