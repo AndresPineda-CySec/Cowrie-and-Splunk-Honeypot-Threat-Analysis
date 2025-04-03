@@ -187,7 +187,7 @@ Once saved, I can see that the HEC is enabled.<br />
 <br />
 <br />
 <img src="https://github.com/AndresPineda-CySec/Cowrie-and-Splunk-Honeypot-Threat-Analysis/blob/main/Images/ManageApps.png?raw=true" height="80%" width="80%"/> <br />
-Now I need to install the [ManukaHoneyPot](https://www.dropbox.com/scl/fi/jupaef16uhgvvvufkc6vz/ManukaHoneyPot.tar.gz?rlkey=k6hy5tyxxhggxttvv0j3frmjt&e=1&dl=0) app into Spunk, which will allow me to visualize Cowrie logs and create a dashboard. To begin, I select "Apps" at the top left of the screen, then choose "Manage Apps" from the drop-down menu.<br />
+Now I need to install the <a href="https://www.dropbox.com/scl/fi/jupaef16uhgvvvufkc6vz/ManukaHoneyPot.tar.gz?rlkey=k6hy5tyxxhggxttvv0j3frmjt&e=1&dl=0">ManukaHoneyPot</a> app into Spunk, which will allow me to visualize Cowrie logs and create a dashboard. To begin, I select "Apps" at the top left of the screen, then choose "Manage Apps" from the drop-down menu.<br />
 <br />
 <br />
 <img src="https://github.com/AndresPineda-CySec/Cowrie-and-Splunk-Honeypot-Threat-Analysis/blob/main/Images/InstallAppByFile.png?raw=true" height="80%" width="80%"/> <br />
