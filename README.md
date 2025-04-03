@@ -184,6 +184,36 @@ By default, the HEC is disabled, so I need to enable it. I do this by selecting 
 <br />
 <img src="https://github.com/AndresPineda-CySec/Cowrie-and-Splunk-Honeypot-Threat-Analysis/blob/main/Images/ScConfirmHECisEnabkled.png?raw=true" height="80%" width="80%"/> <br />
 Once saved, I can see that the HEC is enabled.<br />
+<br />
+<br />
+<img src="https://github.com/AndresPineda-CySec/Cowrie-and-Splunk-Honeypot-Threat-Analysis/blob/main/Images/ManageApps.png?raw=true" height="80%" width="80%"/> <br />
+Now I need to install the [ManukaHoneyPot](https://www.dropbox.com/scl/fi/jupaef16uhgvvvufkc6vz/ManukaHoneyPot.tar.gz?rlkey=k6hy5tyxxhggxttvv0j3frmjt&e=1&dl=0) app into Spunk, which will allow me to visualize Cowrie logs and create a dashboard. To begin, I select "Apps" at the top left of the screen, then choose "Manage Apps" from the drop-down menu.<br />
+<br />
+<br />
+<img src="https://github.com/AndresPineda-CySec/Cowrie-and-Splunk-Honeypot-Threat-Analysis/blob/main/Images/InstallAppByFile.png?raw=true" height="80%" width="80%"/> <br />
+I am now on the "Apps" page, where I can install the ManukaHoneyPot app by selecting "Install app from file."<br />
+<br />
+<br />
+<img src="https://github.com/AndresPineda-CySec/Cowrie-and-Splunk-Honeypot-Threat-Analysis/blob/main/Images/ChooseManukaHoneyPot.png?raw=true" height="80%" width="80%"/> <br />
+Once selected, I can Select the app by browsing my local files.<br />
+<br />
+<br />
+<img src="https://github.com/AndresPineda-CySec/Cowrie-and-Splunk-Honeypot-Threat-Analysis/blob/main/Images/AppinstallNoti.png?raw=true" height="80%" width="80%"/> <br />
+Once the installation is complete, I am redirected to the "Apps" page, where a confirmation message indicates that the ManukaHoneyPot app was successfully installed. Here I can select the newly installed app.<br />
+<br />
+<br />
+<img src="https://github.com/AndresPineda-CySec/Cowrie-and-Splunk-Honeypot-Threat-Analysis/blob/main/Images/EmptyDashBoard.png?raw=true" height="80%" width="80%"/> <br />
+After selecting the ManukaHoneyPot app, I am brought to an empty dashboard. Once Cowrie is up and running, the dashboard will populate with logs. These are the main steps in configuring and preparing Splunk for integration with Cowrie.<br />
+<br />
+<br />
+<br />
+<br />
+<h3 align="center">Exporting Cowrie Logs to Splunk for monitoring:</h3>
+<p align="center">
+<br />
+<br />
+
+
 
   
 
@@ -194,8 +224,7 @@ Once saved, I can see that the HEC is enabled.<br />
 
 
 
-<h3 align="center">Exporting Cowrie Logs to splunk for monitoring:</h3>
-<p align="center">
+
 
 
 
