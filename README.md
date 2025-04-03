@@ -166,7 +166,7 @@ On the "Indexes" page, I created a new index named "Cowrie." I keep the default 
 Now that the index is created, I need to assign it to the Cowrie HEC to ensure that logs from Cowrie are correctly stored in the newly created index.<br />
 <br />
 <br />
-<img src="https://github.com/AndresPineda-CySec/Cowrie-and-Splunk-Honeypot-Threat-Analysis/blob/main/Images/backToDataInput.png?raw=true" height="80%" width="80%"/> <br />
+<img src="https://github.com/AndresPineda-CySec/Cowrie-and-Splunk-Honeypot-Threat-Analysis/blob/main/Images/backToDataInput.jpeg?raw=true" height="80%" width="80%"/> <br />
 I go back to "Data Inputs" found within "Settings."<br />
 <br />
 <br />
