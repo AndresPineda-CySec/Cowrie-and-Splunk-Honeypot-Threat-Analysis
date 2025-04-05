@@ -46,7 +46,7 @@ To change the network adapter settings in VirtualBox, I start by selecting my Ub
 Next, I must configure my router's firewall to complete two tasks: First, port forwarding 22 (SSH) and 23 (Telnet) to my Ubuntu VM. placing my Ubuntu VM into a DMZ. To complete this setup, I must start my Ubuntu VM and run the "ifconfig" command to identify its local IP address. While my router should automatically detect the VM as a connected device, I use the command to verify the connection and confirm the correct IP address before configuring port forwarding and placing the VM in the DMZ.<br />
 <br />
 <br />
-<img src="https://github.com/AndresPineda-CySec/Cowrie-and-Splunk-Honeypot-Threat-Analysis/blob/main/Images/ifconfig.png?raw=true" height="80%" width="80%"/> <br />
+<img src="https://github.com/AndresPineda-CySec/Cowrie-and-Splunk-Honeypot-Threat-Analysis/blob/main/Images/ifconfig.png?raw=true" height="50%" width="50%"/> <br />
 I run the "ifconfig" command and note my VM's IP address. While my router should automatically display the correct hostname and IP address in the firewall settings, it's always best to manually verify that the IP addresses match to avoid misconfiguration.<br />
 <br />
 <br />
