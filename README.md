@@ -252,33 +252,16 @@ Once I retrieve my API key, I can return to the "cowrie.cfg" file and configure 
 I enabled the section and replaced the default placeholder API key with my personal API key from my VirusTotal account.<br />
 <br />
 <br />
+<img src="https://github.com/AndresPineda-CySec/Cowrie-and-Splunk-Honeypot-Threat-Analysis/blob/main/Images/EnableTelnet.png?raw=true" height="80%" width="80%"/> <br />
+Last but not least, I'm finally going to enable the telnet function in Cowrie within the "cowrie.cfg" file.
+<br />
+<br />
 <img src="https://github.com/AndresPineda-CySec/Cowrie-and-Splunk-Honeypot-Threat-Analysis/blob/main/Images/Start%20Cowrie.png?raw=true" height="80%" width="80%"/> <br />
 That’s it! With everything configured, I can now start Cowrie and leave the honeypot running for a day or so to begin collecting data. I use this command to start Cowrie.<br />
-
-
-
-
-
-  
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+<br />
+<br />
+<br />
+<br />
 <h3 align="center">Results:</h3>
 <p align="center">
+After Allowing Cowrie to run for two days straight, these are the results:
