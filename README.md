@@ -81,8 +81,9 @@ Now, I will configure my VM's firewall to block all inbound traffic except for t
 I open Terminal in my Ubuntu VM and check whether the Uncomplicated firewall (UFW) is enabled: it's not. The first step is to enable the firewall. Once enabled, I deny all inbound traffic while allowing outbound traffic. Next, I create a rule to permit inbound traffic on ports 2222, 2223, 22, and port 23, ensuring that only connections intended for Cowrie are accepted. Finally, I verify that my firewall rules have been successfully updated to confirm the changes are in effect.<br />
 <br />
 <br />
+The next step is to forward any traffic for 22 to 2222 and 23 to 2223. Keeping ports 22 and 23 open will make this honeypot more desirable to potential threat actors and a more realistic target. This command utilizes "iptables" to reroute any SSH or TELNET traffic to Cowrie's default ports, 2222 and 2223:<br />
 <img src="https://github.com/AndresPineda-CySec/Cowrie-and-Splunk-Honeypot-Threat-Analysis/blob/main/Images/PortFoward.png?raw=true" height="100%" width="100%"/> <br />
-The next step is to forward any traffic for 22 to 2222. Keeping port 22 open will make this honeypot more desirable to potential threat actors and a more realistic target. This command utilizes "iptables" to reroute any SSH traffic to Cowrie's default port, 2222.<br />
+<img src="https://github.com/AndresPineda-CySec/Cowrie-and-Splunk-Honeypot-Threat-Analysis/blob/main/Images/Route23.png?raw=true" width="100%"/> <br />
 <br />
 <br />
 <img src="https://github.com/AndresPineda-CySec/Cowrie-and-Splunk-Honeypot-Threat-Analysis/blob/main/Images/nano.png?raw=true" height="50%" width="50%"/> <br />
