@@ -265,3 +265,30 @@ That’s it! With everything configured, I can now start Cowrie and leave the ho
 <h3 align="center">Results:</h3>
 <p align="center">
 After Allowing Cowrie to run for two days straight, these are the results:
+<br />
+<br />
+<img src="https://github.com/AndresPineda-CySec/Cowrie-and-Splunk-Honeypot-Threat-Analysis/blob/main/Images/CowrieCommandLog.png?raw=true" height="80%" width="80%"/> <br />
+<br />
+<br />
+<img src="https://github.com/AndresPineda-CySec/Cowrie-and-Splunk-Honeypot-Threat-Analysis/blob/main/Images/CowrieLog.png?raw=true" height="80%" width="80%"/> <br />
+<br />
+<br />
+<img src="https://github.com/AndresPineda-CySec/Cowrie-and-Splunk-Honeypot-Threat-Analysis/blob/main/Images/Man1.png?raw=truer" height="80%" width="80%"/> <br />
+<br />
+<br />
+<img src="https://github.com/AndresPineda-CySec/Cowrie-and-Splunk-Honeypot-Threat-Analysis/blob/main/Images/Man2.png?raw=true" height="80%" width="80%"/> <br />
+<br />
+<br />
+<img src="https://github.com/AndresPineda-CySec/Cowrie-and-Splunk-Honeypot-Threat-Analysis/blob/main/Images/Man3.png?raw=true" height="80%" width="80%"/> <br />
+<br />
+<br />
+<img src="https://github.com/AndresPineda-CySec/Cowrie-and-Splunk-Honeypot-Threat-Analysis/blob/main/Images/Man%204.png?raw=true" height="80%" width="80%"/> <br />
+<br />
+<br />
+<img src="https://github.com/AndresPineda-CySec/Cowrie-and-Splunk-Honeypot-Threat-Analysis/blob/main/Images/Man5.png?raw=true" height="80%" width="80%"/> <br />
+<br />
+<br />
+<img src="https://github.com/AndresPineda-CySec/Cowrie-and-Splunk-Honeypot-Threat-Analysis/blob/main/Images/Man6.png?raw=true" height="80%" width="80%"/> <br />
+<br />
+<br />
+<img src="https://github.com/AndresPineda-CySec/Cowrie-and-Splunk-Honeypot-Threat-Analysis/blob/main/Images/Man7.png?raw=true" height="80%" width="80%"/> <br />
