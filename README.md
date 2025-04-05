@@ -36,13 +36,19 @@ In this project, I run Ubuntu in VirtualBox and deploy a honeypot to capture pot
 <p align="center">
 <br />
 <br />
-Before deploying a honeypot, I want to secure my environment to minimize risks and ensure my project runs safely. The first step is to make sure VirtualBox (VM) is running my Ubuntu virtual machine (VM) through a Network Address Translation (NAT) network. NAT acts as a protective barrier by isolating the VM from direct exposure to my home network while allowing outbound connections. This setup helps safeguard my host machine from potential threats while maintaining the functionality needed for my honeypot deployment.<br />
+Before deploying my honeypot, I want to secure my environment to minimize risks and ensure the project runs safely. The first step is configuring VirtualBox to run my Ubuntu virtual machine (VM) using a Bridged Network adapter. This setup allows the VM to connect directly to the router, making it WAN-facing and accessible from the internet. Since this can introduce potential security risks, I’ve isolated the VM within a Demilitarized Zone (DMZ) on my network. This provides an extra layer of security by segmenting the VM from the rest of my internal devices, helping to contain any threats and prevent lateral movement across my home network.<be />
 <br />
 <br />
-<img src="https://github.com/AndresPineda-CySec/Cowrie-and-Splunk-Honeypot-Threat-Analysis/blob/main/Images/Ensure%20NAT%20is%20enabled.png?raw=true" height="80%" width="80%"/> <br />
-I can verify the network type my virtual machine uses by selecting it in the left column and scrolling down to the Network section. There, I can confirm that NAT is enabled, ensuring my VM is properly isolated while maintaining necessary connectivity.<br />
+<img src="https://github.com/AndresPineda-CySec/Cowrie-and-Splunk-Honeypot-Threat-Analysis/blob/main/Images/BridgeAdapter.png?raw=true" height="80%" width="80%"/> <br />
+To change the network adapter settings in VirtualBox, I start by selecting my Ubuntu virtual machine and navigating to the "Settings" menu. From there, I go to the "Network" tab, where I change the "Attached to" option from the default NAT setting to "Bridged Adapter." This configuration allows the VM to communicate directly with devices on the network and receive its own IP address from the router. Additionally, I enable "Promiscuous Mode" to allow the VM to capture all network traffic on the interface, which is useful for monitoring and logging potential attacks.<br />
 <br />
 <br />
+Next, I must configure my router's firewall to complete two tasks: First, port forwarding 22 (SSH) and 23 (Telnet) to my Ubuntu VM. placing my Ubuntu VM into a DMZ. To complete this setup, I must start my Ubuntu VM and run the "ifconfig" command to identify its local IP address. While my router should automatically detect the VM as a connected device, I use the command to verify the connection and confirm the correct IP address before configuring port forwarding and placing the VM in the DMZ.<br />
+<br />
+<br />
+<img src="https://github.com/AndresPineda-CySec/Cowrie-and-Splunk-Honeypot-Threat-Analysis/blob/main/Images/BridgeAdapter.png?raw=true" height="80%" width="80%"/> <br />
+
+  
 <img src="https://github.com/AndresPineda-CySec/Cowrie-and-Splunk-Honeypot-Threat-Analysis/blob/main/Images/Stealth_scan.png?raw=true" height="60%" width="60%"/> <br />
 Another way I can protect my host machine is by enabling Stealth Mode in the Mac firewall settings. While Stealth Mode does not actively block threats, it helps obscure my Mac from network discovery by preventing it from responding to pings and port scans, reducing its visibility to potential attackers.<br />
 <br />
