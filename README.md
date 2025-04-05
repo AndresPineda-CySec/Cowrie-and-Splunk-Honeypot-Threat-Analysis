@@ -50,7 +50,7 @@ Next, I must configure my router's firewall to complete two tasks: First, port f
 I run the "ifconfig" command and note my VM's IP address. While my router should automatically display the correct hostname and IP address in the firewall settings, it's always best to manually verify that the IP addresses match to avoid misconfiguration.<br />
 <br />
 <br />
-<img src="https://github.com/AndresPineda-CySec/Cowrie-and-Splunk-Honeypot-Threat-Analysis/blob/main/Images/DMZ.png?raw=true" height="80%" width="80%"/> <br />
+<img src="https://github.com/AndresPineda-CySec/Cowrie-and-Splunk-Honeypot-Threat-Analysis/blob/main/Images/DMZ.png?raw=true" height="100%" width="100%"/> <br />
 Now I can log in to my router. Once Logged in, I place my VM into a DMZ...<br />
 <br />
 <br />
@@ -115,11 +115,11 @@ This command installs essential dependencies for setting up Cowrie. It installs 
 Now that the dependencies are installed, the next step is to switch to the Cowrie user. I’ll know I’m using the Cowrie user because the terminal prompt will update to reflect the change in the username. This confirms I’m operating within the restricted Cowrie account and ready to continue with the installation process.<br />
 <br />
 <br />
-<img src="https://github.com/AndresPineda-CySec/Cowrie-and-Splunk-Honeypot-Threat-Analysis/blob/main/Images/downloadCowire.png?raw=true" height="80%" width="80%"/> <br />
+<img src="https://github.com/AndresPineda-CySec/Cowrie-and-Splunk-Honeypot-Threat-Analysis/blob/main/Images/downloadCowire.png?raw=true" height="100%" width="100%"/> <br />
 I can now install Cowrie using this command.<br />
 <br />
 <br />
-<img src="https://github.com/AndresPineda-CySec/Cowrie-and-Splunk-Honeypot-Threat-Analysis/blob/main/Images/createVenv.png?raw=true"height="80%" width="80%"/> <br />
+<img src="https://github.com/AndresPineda-CySec/Cowrie-and-Splunk-Honeypot-Threat-Analysis/blob/main/Images/createVenv.png?raw=true"height="70%" width="70%"/> <br />
 I set up a Python virtual environment for Cowrie to isolate it from the system. First, I navigated to the Cowrie directory and created a virtual environment using "python3 -m venv cowrie-env." Then, I activated it with "source cowrie-env/bin/activate," ensuring that installed packages remain contained within this environment. This helps improve security by preventing dependency conflicts and limiting the impact of a potential compromise.<br />
 <br />
 <br />
@@ -127,7 +127,7 @@ I set up a Python virtual environment for Cowrie to isolate it from the system. 
 I upgraded "pip" within the virtual environment using this command. "install --upgrade" ensures "pip" is installed and updates it to the latest version if an older one exists. This helps prevent compatibility issues and keeps the environment secure with the latest fixes and features.<br />
 <br />
 <br />
-<img src="https://github.com/AndresPineda-CySec/Cowrie-and-Splunk-Honeypot-Threat-Analysis/blob/main/Images/pipReq.png?raw=true"height="80%" width="80%"> <br />
+<img src="https://github.com/AndresPineda-CySec/Cowrie-and-Splunk-Honeypot-Threat-Analysis/blob/main/Images/pipReq.png?raw=true"height="100%" width="100%"> <br />
 I then install the "requirements.txt" file to ensure all necessary packages are up to date and properly configured within the virtual environment.<br />
 <br />
 <br />
@@ -138,11 +138,11 @@ After updating Cowrie, I need to edit its configuration file. I navigate to the 
 In the same directory, I edit the "cowrie.cfg" file using the command nano cowrie.cfg."<br />
 <br />
 <br />
-<img src="https://github.com/AndresPineda-CySec/Cowrie-and-Splunk-Honeypot-Threat-Analysis/blob/main/Images/CowrieHostName.png?raw=true"height="80%" width="80%"/> <br />
+<img src="https://github.com/AndresPineda-CySec/Cowrie-and-Splunk-Honeypot-Threat-Analysis/blob/main/Images/CowrieHostName.png?raw=true"height="100%" width="100%"/> <br />
 I edit the cowrie.cfg file and change the hostname to something more realistic, naming it "ubuntu-server-08" to better mimic a real server setup.<br /> 
 <br />
 <br />
-<img src="https://github.com/AndresPineda-CySec/Cowrie-and-Splunk-Honeypot-Threat-Analysis/blob/main/Images/SSH-SSL-UbuntuVers.png?raw=true"height="80%" width="80%"/> <br />
+<img src="https://github.com/AndresPineda-CySec/Cowrie-and-Splunk-Honeypot-Threat-Analysis/blob/main/Images/SSH-SSL-UbuntuVers.png?raw=true"height="100%" width="100%"/> <br />
 Since the config file originally listed a Debian OS and I changed the hostname to "ubuntu-server-08," I now have to update the OS to Ubuntu to match. Additionally, I updated the OpenSSH and OpenSSL versions to slightly newer ones than initially listed, ensuring the configuration reflects a more current system setup.<br />
 <br />
 <br />
@@ -155,19 +155,19 @@ With these changes in the config file, my honeypot will appear more authentic, m
 <p align="center">
 <br />
 <br />
-<img src="https://github.com/AndresPineda-CySec/Cowrie-and-Splunk-Honeypot-Threat-Analysis/blob/main/Images/splunkAddData.png?raw=true" height="80%" width="80%"/> <br />
+<img src="https://github.com/AndresPineda-CySec/Cowrie-and-Splunk-Honeypot-Threat-Analysis/blob/main/Images/splunkAddData.png?raw=true" height="100%" width="810%"/> <br />
 To integrate Cowrie with Splunk, I must first create an HTTP Event Collector (HEC) in Splunk. I start by navigating to "Settings" and selecting "Add Data" to begin the setup process.<br />
 <br />
 <br />
-<img src="https://github.com/AndresPineda-CySec/Cowrie-and-Splunk-Honeypot-Threat-Analysis/blob/main/Images/SplunkAddMonitor.png?raw=true" height="80%" width="80%"/> <br />
+<img src="https://github.com/AndresPineda-CySec/Cowrie-and-Splunk-Honeypot-Threat-Analysis/blob/main/Images/SplunkAddMonitor.png?raw=true" height="100%" width="100%"/> <br />
 This takes me to the data input page, where I select the "Monitor" option to continue setting up the HTTP Event Collector.<br />
 <br />
 <br />
-<img src="https://github.com/AndresPineda-CySec/Cowrie-and-Splunk-Honeypot-Threat-Analysis/blob/main/Images/SplunkHTTPEventCollector.png?raw=true" height="80%" width="80%"/> <br />
+<img src="https://github.com/AndresPineda-CySec/Cowrie-and-Splunk-Honeypot-Threat-Analysis/blob/main/Images/SplunkHTTPEventCollector.png?raw=true" height="100%" width="100%"/> <br />
 After selecting "Monitor," I arrive at the "Add Data" page. Here, I choose "HTTP Event Collector" from the left panel and set the new HEC name to "Cowrie." I keep the default settings for the remaining configurations and click "Next" to proceed through the setup steps.<br />
 <br />
 <br />
-<img src="https://github.com/AndresPineda-CySec/Cowrie-and-Splunk-Honeypot-Threat-Analysis/blob/main/Images/SplunkToken.png?raw=true" height="80%" width="80%"/> <br />
+<img src="https://github.com/AndresPineda-CySec/Cowrie-and-Splunk-Honeypot-Threat-Analysis/blob/main/Images/SplunkToken.png?raw=true" height="100%" width="100%"/> <br />
 Once the HEC is configured, I reach the "Done" page, where my HEC token value is displayed. I make sure to take note of the token, as I will need to add it to my "cowrie.cfg" file in my Ubuntu VM to enable log forwarding to Splunk.<br />
 <br />
 <br />
@@ -182,11 +182,11 @@ On the "Indexes" page, I created a new index named "Cowrie." I keep the default 
 Now that the index is created, I need to assign it to the Cowrie HEC to ensure that logs from Cowrie are correctly stored in the newly created index.<br />
 <br />
 <br />
-<img src="https://github.com/AndresPineda-CySec/Cowrie-and-Splunk-Honeypot-Threat-Analysis/blob/main/Images/backToDataInput.jpeg?raw=true" height="80%" width="80%"/> <br />
+<img src="https://github.com/AndresPineda-CySec/Cowrie-and-Splunk-Honeypot-Threat-Analysis/blob/main/Images/backToDataInput.jpeg?raw=true" height="70%" width="70%"/> <br />
 I go back to "Data Inputs" found within "Settings."<br />
 <br />
 <br />
-<img src="https://github.com/AndresPineda-CySec/Cowrie-and-Splunk-Honeypot-Threat-Analysis/blob/main/Images/SelectHEC.png?raw=true" height="80%" width="80%"/> <br />
+<img src="https://github.com/AndresPineda-CySec/Cowrie-and-Splunk-Honeypot-Threat-Analysis/blob/main/Images/SelectHEC.png?raw=true" height="100%" width="100%"/> <br />
 On the "Data Inputs" page, I select "HTTP Event Collector" to view the "Cowrie HEC" I created earlier.<br />
 <br />
 <br />
@@ -198,15 +198,15 @@ On the "HTTP Event Collector" page, I select my Cowrie HEC to edit it. I then as
 By default, the HEC is disabled, so I need to enable it. I do this by selecting "Global Settings" and selecting "Enabled."<br />
 <br />
 <br />
-<img src="https://github.com/AndresPineda-CySec/Cowrie-and-Splunk-Honeypot-Threat-Analysis/blob/main/Images/ScConfirmHECisEnabkled.png?raw=true" height="80%" width="80%"/> <br />
+<img src="https://github.com/AndresPineda-CySec/Cowrie-and-Splunk-Honeypot-Threat-Analysis/blob/main/Images/ScConfirmHECisEnabkled.png?raw=true" height="100%" width="100%"/> <br />
 Once saved, I can see that the HEC is enabled.<br />
 <br />
 <br />
-<img src="https://github.com/AndresPineda-CySec/Cowrie-and-Splunk-Honeypot-Threat-Analysis/blob/main/Images/ManageApps.png?raw=true" height="80%" width="80%"/> <br />
+<img src="https://github.com/AndresPineda-CySec/Cowrie-and-Splunk-Honeypot-Threat-Analysis/blob/main/Images/ManageApps.png?raw=true" height="60%" width="60%"/> <br />
 Now I need to install the <a href="https://www.dropbox.com/scl/fi/jupaef16uhgvvvufkc6vz/ManukaHoneyPot.tar.gz?rlkey=k6hy5tyxxhggxttvv0j3frmjt&e=1&dl=0">ManukaHoneyPot</a> app into Spunk, which will allow me to visualize Cowrie logs and create a dashboard. To begin, I select "Apps" at the top left of the screen, then choose "Manage Apps" from the drop-down menu.<br />
 <br />
 <br />
-<img src="https://github.com/AndresPineda-CySec/Cowrie-and-Splunk-Honeypot-Threat-Analysis/blob/main/Images/InstallAppByFile.png?raw=true" height="80%" width="80%"/> <br />
+<img src="https://github.com/AndresPineda-CySec/Cowrie-and-Splunk-Honeypot-Threat-Analysis/blob/main/Images/InstallAppByFile.png?raw=true" height="100%" width="100%"/> <br />
 I am now on the "Apps" page, where I can install the ManukaHoneyPot app by selecting "Install app from file."<br />
 <br />
 <br />
@@ -214,11 +214,11 @@ I am now on the "Apps" page, where I can install the ManukaHoneyPot app by selec
 Once selected, I can Select the app by browsing my local files.<br />
 <br />
 <br />
-<img src="https://github.com/AndresPineda-CySec/Cowrie-and-Splunk-Honeypot-Threat-Analysis/blob/main/Images/AppinstallNoti.png?raw=true" height="80%" width="80%"/> <br />
+<img src="https://github.com/AndresPineda-CySec/Cowrie-and-Splunk-Honeypot-Threat-Analysis/blob/main/Images/AppinstallNoti.png?raw=true" height="40%" width="40%"/> <br />
 Once the installation is complete, I am redirected to the "Apps" page, where a confirmation message indicates that the ManukaHoneyPot app was successfully installed. Here I can select the newly installed app.<br />
 <br />
 <br />
-<img src="https://github.com/AndresPineda-CySec/Cowrie-and-Splunk-Honeypot-Threat-Analysis/blob/main/Images/EmptyDashBoard.png?raw=true" height="80%" width="80%"/> <br />
+<img src="https://github.com/AndresPineda-CySec/Cowrie-and-Splunk-Honeypot-Threat-Analysis/blob/main/Images/EmptyDashBoard.png?raw=true" height="100%" width="100%"/> <br />
 After selecting the ManukaHoneyPot app, I am brought to an empty dashboard. Once Cowrie is up and running, the dashboard will populate with logs. These are the main steps in configuring and preparing Splunk for integration with Cowrie.<br />
 <br />
 <br />
@@ -228,11 +228,11 @@ After selecting the ManukaHoneyPot app, I am brought to an empty dashboard. Once
 <p align="center">
 <br />
 <br />
-<img src="https://github.com/AndresPineda-CySec/Cowrie-and-Splunk-Honeypot-Threat-Analysis/blob/main/Images/Cowrie.cfg.png?raw=true" height="80%" width="80%"/> <br />
+<img src="https://github.com/AndresPineda-CySec/Cowrie-and-Splunk-Honeypot-Threat-Analysis/blob/main/Images/Cowrie.cfg.png?raw=true" height="60%" width="60%"/> <br />
 To link my honeypot to Splunk, I first access my Ubuntu VM and switch to the "cowrie" user through the terminal. From there, I navigate the directory to get to the Cowrie configuration file and use the command "nano cowrie.cfg" to access cowrie.cfg.<br /> 
 <br />
 <br />
-<img src="https://github.com/AndresPineda-CySec/Cowrie-and-Splunk-Honeypot-Threat-Analysis/blob/main/Images/OriginalCowrieSplunkconfig.png?raw=true" height="80%" width="80%"/> <br />
+<img src="https://github.com/AndresPineda-CySec/Cowrie-and-Splunk-Honeypot-Threat-Analysis/blob/main/Images/OriginalCowrieSplunkconfig.png?raw=true" height="100%" width="100%"/> <br />
 Inside the config file, I located the Splunk output section, which was initially disabled and configured with the incorrect URL and token; both need to be updated for proper integration.<br />
 <br />
 <br />
@@ -252,11 +252,11 @@ Once I retrieve my API key, I can return to the "cowrie.cfg" file and configure 
 I enabled the section and replaced the default placeholder API key with my personal API key from my VirusTotal account.<br />
 <br />
 <br />
-<img src="https://github.com/AndresPineda-CySec/Cowrie-and-Splunk-Honeypot-Threat-Analysis/blob/main/Images/EnableTelnet.png?raw=true" height="80%" width="80%"/> <br />
+<img src="https://github.com/AndresPineda-CySec/Cowrie-and-Splunk-Honeypot-Threat-Analysis/blob/main/Images/EnableTelnet.png?raw=true" height="60%" width="60%"/> <br />
 Last but not least, I'm finally going to enable the telnet function in Cowrie within the "cowrie.cfg" file.
 <br />
 <br />
-<img src="https://github.com/AndresPineda-CySec/Cowrie-and-Splunk-Honeypot-Threat-Analysis/blob/main/Images/Start%20Cowrie.png?raw=true" height="80%" width="80%"/> <br />
+<img src="https://github.com/AndresPineda-CySec/Cowrie-and-Splunk-Honeypot-Threat-Analysis/blob/main/Images/Start%20Cowrie.png?raw=true" height="60%" width="60%"/> <br />
 That’s it! With everything configured, I can now start Cowrie and leave the honeypot running for a day or so to begin collecting data. I use this command to start Cowrie.<br />
 <br />
 <br />
@@ -267,31 +267,31 @@ That’s it! With everything configured, I can now start Cowrie and leave the ho
 After Allowing Cowrie to run for two days straight, these are the results:
 <br />
 <br />
-<img src="https://github.com/AndresPineda-CySec/Cowrie-and-Splunk-Honeypot-Threat-Analysis/blob/main/Images/CowrieCommandLog.png?raw=true" height="80%" width="80%"/> <br />
+<img src="https://github.com/AndresPineda-CySec/Cowrie-and-Splunk-Honeypot-Threat-Analysis/blob/main/Images/CowrieCommandLog.png?raw=true" height="60%" width="60%"/> <br />
 Any data sent to the honeypot is automatically logged. To view these logs, I run "cat cowrie.log" to display the default log file used by Cowrie.<br />
 <br />
 <br />
-<img src="https://github.com/AndresPineda-CySec/Cowrie-and-Splunk-Honeypot-Threat-Analysis/blob/main/Images/CowrieLog.png?raw=true" height="80%" width="80%"/> <br />
+<img src="https://github.com/AndresPineda-CySec/Cowrie-and-Splunk-Honeypot-Threat-Analysis/blob/main/Images/CowrieLog.png?raw=true" height="100%" width="100%"/> <br />
 This displays all the logs, which can be overwhelming given the amount of traffic the honeypot receives. Fortunately, I have Splunk set up to help visualize and organize this data more effectively.<br />
 <br />
 <br />
-<img src="https://github.com/AndresPineda-CySec/Cowrie-and-Splunk-Honeypot-Threat-Analysis/blob/main/Images/Manuka0.png?raw=true" height="80%" width="80%"/> <br />
+<img src="https://github.com/AndresPineda-CySec/Cowrie-and-Splunk-Honeypot-Threat-Analysis/blob/main/Images/Manuka0.png?raw=true" height="50%" width="50%"/> <br />
 Returning to Splunk, I can now see the ManukaHoneyPot app listed in the left-hand "Apps" column. After selecting it, the log data is automatically visualized within the Manuka dashboard.<br />
 <br />
 <br />
-<img src="https://github.com/AndresPineda-CySec/Cowrie-and-Splunk-Honeypot-Threat-Analysis/blob/main/Images/Man1.png?raw=truer" height="80%" width="80%"/> <br />
+<img src="https://github.com/AndresPineda-CySec/Cowrie-and-Splunk-Honeypot-Threat-Analysis/blob/main/Images/Man1.png?raw=truer" height="100%" width="100%"/> <br />
 The first set of statistics displayed shows connection attempts along with a timeline of when those connections occurred. The dashboard breaks down the number of successful and failed login attempts, as well as the total number of distinct IP addresses that have interacted with the honeypot. There is also a "Files Downloaded" section, although it’s currently empty since no files have been captured yet.<br /> 
 <br />
 <br />
-<img src="https://github.com/AndresPineda-CySec/Cowrie-and-Splunk-Honeypot-Threat-Analysis/blob/main/Images/Man2.png?raw=true" height="80%" width="80%"/> <br />
+<img src="https://github.com/AndresPineda-CySec/Cowrie-and-Splunk-Honeypot-Threat-Analysis/blob/main/Images/Man2.png?raw=true" height="100%" width="100%"/> <br />
 The next section of the app features a global map that shows the locations of all connection attempts made to the honeypot.<br />
 <br />
 <br />
-<img src="https://github.com/AndresPineda-CySec/Cowrie-and-Splunk-Honeypot-Threat-Analysis/blob/main/Images/Man3.png?raw=true" height="80%" width="80%"/> <br />
+<img src="https://github.com/AndresPineda-CySec/Cowrie-and-Splunk-Honeypot-Threat-Analysis/blob/main/Images/Man3.png?raw=true" height="100%" width="100%"/> <br />
 In the next section of the app, the previous connection data is broken down further. It displays the top attacker IP addresses, a pie chart showing the countries and locations where connections originated, and when selected, reveals the number of unique IP addresses from that region. There’s also a section highlighting the most commonly scanned ports.<br />
 <br />
 <br />
-<img src="https://github.com/AndresPineda-CySec/Cowrie-and-Splunk-Honeypot-Threat-Analysis/blob/main/Images/Man%204.png?raw=true" height="80%" width="80%"/> <br />
+<img src="https://github.com/AndresPineda-CySec/Cowrie-and-Splunk-Honeypot-Threat-Analysis/blob/main/Images/Man%204.png?raw=true" height="100%" width="100%"/> <br />
 This section displays the most commonly used usernames and passwords by attackers, along with the number of times each one has been attempted.<br />
 <br />
 <br />
@@ -299,7 +299,7 @@ This section displays the most commonly used usernames and passwords by attacker
 This section demonstrates the integration with VirusTotal. Upon scanning the file, VirusTotal reveals that 29 out of 62 antivirus engines have flagged it as malicious.<br />
 <br />
 <br />
-<img src="https://github.com/AndresPineda-CySec/Cowrie-and-Splunk-Honeypot-Threat-Analysis/blob/main/Images/Man6.png?raw=true" height="80%" width="80%"/> <br />
+<img src="https://github.com/AndresPineda-CySec/Cowrie-and-Splunk-Honeypot-Threat-Analysis/blob/main/Images/Man6.png?raw=true" height="100%" width="100%"/> <br />
 This section highlights the most frequently used commands by attackers alongside the more obscure and rare ones. It’s one of my favorite parts of the analysis, as it provides valuable insights into the methods different attackers use to probe and exploit system vulnerabilities. By examining these command patterns, we can better understand their strategies and techniques, allowing us to identify potential security gaps and improve our defenses.<br />
 <br />
 <br />
