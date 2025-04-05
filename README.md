@@ -10,6 +10,7 @@ In this project, I run Ubuntu in VirtualBox and deploy a honeypot to capture pot
 - <b>Cowrie</b>
 - <b>Splunk</b>
 - <b>Terminal</b>
+- <b>VirusTotal</b>
 
 <h2>Environments Used</h2>
 
@@ -28,6 +29,10 @@ In this project, I run Ubuntu in VirtualBox and deploy a honeypot to capture pot
 - <b>Network Segmentation</b>
 - <b>Defense in Depth</b>
 - <b>Principle of Least Privilege</b>
+- <b>Firewall Configuratione</b>
+- <b>Network Configuration & Traffic Management</b>
+- <b>Network Segmentation</b>
+
 
 <h2>Project Walk-Through:</h2>
 
@@ -40,7 +45,7 @@ Before deploying my honeypot, I want to secure my environment to minimize risks 
 <br />
 <br />
 <img src="https://github.com/AndresPineda-CySec/Cowrie-and-Splunk-Honeypot-Threat-Analysis/blob/main/Images/BridgeAdapter.png?raw=true" height="80%" width="80%"/> <br />
-To change the network adapter settings in VirtualBox, I start by selecting my Ubuntu virtual machine and navigating to the "Settings" menu. From there, I go to the "Network" tab, where I change the "Attached to" option from the default NAT setting to "Bridged Adapter." This configuration allows the VM to communicate directly with devices on the network and receive its own IP address from the router. Additionally, I enable "Promiscuous Mode" to allow the VM to capture all network traffic on the interface, which is useful for monitoring and logging potential attacks.<br />
+To change the network adapter settings in VirtualBox, I start by selecting my Ubuntu virtual machine and navigating to the "Settings" menu. From there, I go to the "Network" tab, where I change the "Attached to" option from the default NAT setting to "Bridged Adapter." This configuration allows the VM to communicate directly with devices on the network and receive its own IP address from the router. Additionally, I enabled "Promiscuous Mode" to allow the VM to capture all network traffic on the interface, which is useful for monitoring and logging potential attacks.<br />
 <br />
 <br />
 Next, I must configure my router's firewall to complete two tasks: First, port forwarding 22 (SSH) and 23 (Telnet) to my Ubuntu VM. placing my Ubuntu VM into a DMZ. To complete this setup, I must start my Ubuntu VM and run the "ifconfig" command to identify its local IP address. While my router should automatically detect the VM as a connected device, I use the command to verify the connection and confirm the correct IP address before configuring port forwarding and placing the VM in the DMZ.<br />
