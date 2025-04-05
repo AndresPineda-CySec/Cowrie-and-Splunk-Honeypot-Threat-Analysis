@@ -222,6 +222,24 @@ Inside the config file, I located the Splunk output section, which was initially
 <br />
 <img src="https://github.com/AndresPineda-CySec/Cowrie-and-Splunk-Honeypot-Threat-Analysis/blob/main/Images/updated%20cowrie:splunk.png?raw=true" height="80%" width="80%"/> <br />
 I update the "Output_Splunk" section by replacing the default URL with my host machine's IP address and inserting the correct token from my Cowrie HEC in Splunk. This ensures that Cowrie logs are sent to the right destination for analysis.<br />
+<br />
+<br />
+<img src="https://github.com/AndresPineda-CySec/Cowrie-and-Splunk-Honeypot-Threat-Analysis/blob/main/Images/virusTotalAPIKey.png?raw=true" height="80%" width="80%"/> <br />
+The ManukaHoneyPot app includes a feature that allows integration with VirusTotal directly within the dashboard. To link VirusTotal with Cowrie, I must retrieve my API key from my VirusTotal account.<br />
+<br />
+<br />
+<img src="https://github.com/AndresPineda-CySec/Cowrie-and-Splunk-Honeypot-Threat-Analysis/blob/main/Images/OgVirusTotalConfig.png?raw=true" height="80%" width="80%"/> <br />
+Once I retrieve my API key, I can return to the "cowrie.cfg" file and configure the "output_virustotal" section. By default, this output is disabled and contains a placeholder API key.<br />
+<br />
+<br />
+<img src="https://github.com/AndresPineda-CySec/Cowrie-and-Splunk-Honeypot-Threat-Analysis/blob/main/Images/UpdatedVTConfigCowrie.png?raw=true" height="80%" width="80%"/> <br />
+I enabled the section and replaced the default placeholder API key with my personal API key from my VirusTotal account.<br />
+<br />
+<br />
+<img src="https://github.com/AndresPineda-CySec/Cowrie-and-Splunk-Honeypot-Threat-Analysis/blob/main/Images/Start%20Cowrie.png?raw=true" height="80%" width="80%"/> <br />
+That’s it! With everything configured, I can now start Cowrie and leave the honeypot running for a day or so to begin collecting data. I use this command to start Cowrie.<br />
+
+
 
 
 
