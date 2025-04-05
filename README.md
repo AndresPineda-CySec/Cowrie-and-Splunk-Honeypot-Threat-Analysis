@@ -268,27 +268,43 @@ After Allowing Cowrie to run for two days straight, these are the results:
 <br />
 <br />
 <img src="https://github.com/AndresPineda-CySec/Cowrie-and-Splunk-Honeypot-Threat-Analysis/blob/main/Images/CowrieCommandLog.png?raw=true" height="80%" width="80%"/> <br />
+Any data sent to the honeypot is automatically logged. To view these logs, I run "cat cowrie.log" to display the default log file used by Cowrie.<br />
 <br />
 <br />
 <img src="https://github.com/AndresPineda-CySec/Cowrie-and-Splunk-Honeypot-Threat-Analysis/blob/main/Images/CowrieLog.png?raw=true" height="80%" width="80%"/> <br />
+This displays all the logs, which can be overwhelming given the amount of traffic the honeypot receives. Fortunately, I have Splunk set up to help visualize and organize this data more effectively.<br />
+<br />
+<br />
+<img src="https://github.com/AndresPineda-CySec/Cowrie-and-Splunk-Honeypot-Threat-Analysis/blob/main/Images/Manuka0.png?raw=true" height="80%" width="80%"/> <br />
+Returning to Splunk, I can now see the ManukaHoneyPot app listed in the left-hand "Apps" column. After selecting it, the log data is automatically visualized within the Manuka dashboard.<br />
 <br />
 <br />
 <img src="https://github.com/AndresPineda-CySec/Cowrie-and-Splunk-Honeypot-Threat-Analysis/blob/main/Images/Man1.png?raw=truer" height="80%" width="80%"/> <br />
+The first set of statistics displayed shows connection attempts along with a timeline of when those connections occurred. The dashboard breaks down the number of successful and failed login attempts, as well as the total number of distinct IP addresses that have interacted with the honeypot. There is also a "Files Downloaded" section, although it’s currently empty since no files have been captured yet.<br /> 
 <br />
 <br />
 <img src="https://github.com/AndresPineda-CySec/Cowrie-and-Splunk-Honeypot-Threat-Analysis/blob/main/Images/Man2.png?raw=true" height="80%" width="80%"/> <br />
+The next section of the app features a global map that shows the locations of all connection attempts made to the honeypot.<br />
 <br />
 <br />
 <img src="https://github.com/AndresPineda-CySec/Cowrie-and-Splunk-Honeypot-Threat-Analysis/blob/main/Images/Man3.png?raw=true" height="80%" width="80%"/> <br />
+In the next section of the app, the previous connection data is broken down further. It displays the top attacker IP addresses, a pie chart showing the countries and locations where connections originated, and when selected, reveals the number of unique IP addresses from that region. There’s also a section highlighting the most commonly scanned ports.<br />
 <br />
 <br />
 <img src="https://github.com/AndresPineda-CySec/Cowrie-and-Splunk-Honeypot-Threat-Analysis/blob/main/Images/Man%204.png?raw=true" height="80%" width="80%"/> <br />
+This section displays the most commonly used usernames and passwords by attackers, along with the number of times each one has been attempted.<br />
 <br />
 <br />
 <img src="https://github.com/AndresPineda-CySec/Cowrie-and-Splunk-Honeypot-Threat-Analysis/blob/main/Images/Man5.png?raw=true" height="80%" width="80%"/> <br />
+This section demonstrates the integration with VirusTotal. Upon scanning the file, VirusTotal reveals that 29 out of 62 antivirus engines have flagged it as malicious.<br />
 <br />
 <br />
 <img src="https://github.com/AndresPineda-CySec/Cowrie-and-Splunk-Honeypot-Threat-Analysis/blob/main/Images/Man6.png?raw=true" height="80%" width="80%"/> <br />
+This section highlights the most frequently used commands by attackers alongside the more obscure and rare ones. It’s one of my favorite parts of the analysis, as it provides valuable insights into the methods different attackers use to probe and exploit system vulnerabilities. By examining these command patterns, we can better understand their strategies and techniques, allowing us to identify potential security gaps and improve our defenses.<br />
 <br />
 <br />
 <img src="https://github.com/AndresPineda-CySec/Cowrie-and-Splunk-Honeypot-Threat-Analysis/blob/main/Images/Man7.png?raw=true" height="80%" width="80%"/> <br />
+This dashboard section displays the most recent TTY session logs recorded by the Cowrie honeypot, showing attacker interactions through SSH or Telnet. Each entry links to a recorded session file that can be replayed to analyze the commands executed during the intrusion attempt. It helps visualize and investigate real-time attack behavior in a controlled environment. Again, this is a favorite section of mine.<br />
+<br />
+<br />
+This concludes my honeypot project.
