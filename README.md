@@ -29,7 +29,7 @@ In this project, I run Ubuntu in VirtualBox and deploy a honeypot to capture pot
 - <b>Network Segmentation</b>
 - <b>Defense in Depth</b>
 - <b>Principle of Least Privilege</b>
-- <b>Firewall Configuratione</b>
+- <b>Firewall Configuration</b>
 - <b>Network Configuration & Traffic Management</b>
 - <b>Network Segmentation</b>
 
